@@ -2,16 +2,16 @@ name: jou
 on:
   push:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/2 * * * *"
 jobs:
   reminder:
     runs-on: ubuntu-latest
     steps:
       - uses: gr2m/set-cron-schedule-action@v2
         with:
-          token: ${{ secrets.TOKEN }}
+          #token: ${{ secrets.TOKEN }}
           cron: |
-            */5 * * * *
+            */2 * * * *
           workflow: pa.yml
           message: "jou"
   test:
