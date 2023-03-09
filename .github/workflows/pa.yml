@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: gr2m/set-cron-schedule-action@v2
         with:
-          #token: ${{ secrets.TOKEN }}
+          token: ${{ secrets.TOKEN }}
           cron: |
             */2 * * * *
           workflow: pa.yml
